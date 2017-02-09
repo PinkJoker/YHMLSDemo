@@ -21,6 +21,9 @@
 		371360301E49907700EABCB7 /* RootBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713602F1E49907700EABCB7 /* RootBuyCarViewController.m */; };
 		371360331E49908200EABCB7 /* RootMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371360321E49908200EABCB7 /* RootMyViewController.m */; };
 		3713603C1E49C62700EABCB7 /* circularBeadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713603B1E49C62700EABCB7 /* circularBeadScrollView.m */; };
+		37DC28CB1E4AEC9E00D61AE9 /* circularCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DC28C91E4AEC9E00D61AE9 /* circularCollectionViewCell.m */; };
+		37DC28CC1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DC28CA1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib */; };
+		37DC28CF1E4B077C00D61AE9 /* homeTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DC28CE1E4B077C00D61AE9 /* homeTableViewDataSource.m */; };
 		E8EB30BB8ACEFD91CD96E23A /* libPods-YHMLSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8364FEF6CE1C2943C9BC3EB /* libPods-YHMLSDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,11 @@
 		371360321E49908200EABCB7 /* RootMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootMyViewController.m; sourceTree = "<group>"; };
 		3713603A1E49C62700EABCB7 /* circularBeadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circularBeadScrollView.h; sourceTree = "<group>"; };
 		3713603B1E49C62700EABCB7 /* circularBeadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circularBeadScrollView.m; sourceTree = "<group>"; };
+		37DC28C81E4AEC9E00D61AE9 /* circularCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circularCollectionViewCell.h; sourceTree = "<group>"; };
+		37DC28C91E4AEC9E00D61AE9 /* circularCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circularCollectionViewCell.m; sourceTree = "<group>"; };
+		37DC28CA1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circularCollectionViewCell.xib; sourceTree = "<group>"; };
+		37DC28CD1E4B077C00D61AE9 /* homeTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeTableViewDataSource.h; sourceTree = "<group>"; };
+		37DC28CE1E4B077C00D61AE9 /* homeTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeTableViewDataSource.m; sourceTree = "<group>"; };
 		97AAC7D95B5220B60B6F99CD /* Pods-YHMLSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMLSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMLSDemo/Pods-YHMLSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E8364FEF6CE1C2943C9BC3EB /* libPods-YHMLSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YHMLSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,8 +151,13 @@
 			children = (
 				371360281E49905000EABCB7 /* RootHomeViewController.h */,
 				371360291E49905000EABCB7 /* RootHomeViewController.m */,
+				37DC28CD1E4B077C00D61AE9 /* homeTableViewDataSource.h */,
+				37DC28CE1E4B077C00D61AE9 /* homeTableViewDataSource.m */,
 				3713603A1E49C62700EABCB7 /* circularBeadScrollView.h */,
 				3713603B1E49C62700EABCB7 /* circularBeadScrollView.m */,
+				37DC28C81E4AEC9E00D61AE9 /* circularCollectionViewCell.h */,
+				37DC28C91E4AEC9E00D61AE9 /* circularCollectionViewCell.m */,
+				37DC28CA1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 				371360141E496BD300EABCB7 /* LaunchScreen.storyboard in Resources */,
 				371360111E496BD300EABCB7 /* Assets.xcassets in Resources */,
 				3713600F1E496BD300EABCB7 /* Main.storyboard in Resources */,
+				37DC28CC1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3713602D1E49906500EABCB7 /* RootCategoryViewController.m in Sources */,
+				37DC28CF1E4B077C00D61AE9 /* homeTableViewDataSource.m in Sources */,
 				371360301E49907700EABCB7 /* RootBuyCarViewController.m in Sources */,
 				371360331E49908200EABCB7 /* RootMyViewController.m in Sources */,
 				3713602A1E49905000EABCB7 /* RootHomeViewController.m in Sources */,
@@ -327,6 +342,7 @@
 				371360261E498CA400EABCB7 /* BaseTabbarViewController.m in Sources */,
 				371360061E496BD300EABCB7 /* main.m in Sources */,
 				3713601D1E4974E300EABCB7 /* RootViewController.m in Sources */,
+				37DC28CB1E4AEC9E00D61AE9 /* circularCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

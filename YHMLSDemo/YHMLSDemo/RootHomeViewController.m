@@ -7,13 +7,17 @@
 //
 
 #import "RootHomeViewController.h"
-//#import ""
-@interface RootHomeViewController ()<SDCycleScrollViewDelegate>
+#import "circularBeadScrollView.h"
+#import "homeTableViewDataSource.h"
+@interface RootHomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     SDCycleScrollView *bannerView;
     NSArray *bannerArray;
+    circularBeadScrollView *collectView;
 //    UIScrollView *
 }
+@property(nonatomic, strong)UITableView *homeTableView;
+@property(nonatomic, strong)homeTableViewDataSource *tableDataSource;
 @end
 
 @implementation RootHomeViewController
@@ -24,8 +28,20 @@
    // self.view.backgroundColor = [UIColor yellowColor];
     [self setNavgationView];
     [self setBanner];
- 
+    [self setCollectView];
     
+    self.homeTableView = [[UITableView alloc]init];
+    [self.view addSubview:self.homeTableView];
+    [self.homeTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+    NSMutableArray *array = [NSMutableArray array];
+   
+    self.tableDataSource = [[homeTableViewDataSource alloc]initWithTableViwDataSource:@"cell" withArray:array andCallBack:^(id item, id cell) {
+        
+    }];
+    self.homeTableView.delegate = self;
+    self.homeTableView.dataSource = self;
 }
 
 -(void)setNavgationView
@@ -44,9 +60,16 @@
     self.navigationItem.titleView = label;
 }
 
-
-
-
+-(void)setCollectView
+{
+    collectView = [[circularBeadScrollView alloc]init];
+    [self.view addSubview:collectView];
+    [collectView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(bannerView.mas_bottom);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(kWidth *0.3);
+    }];
+}
 
 -(void)setBanner
 {
@@ -59,6 +82,10 @@
     [self.view addSubview:bannerView];
     
 }
+
+#pragma mark -UITableViewDelegate
+
+
 #pragma mark - SDCycleScrollViewDelegate
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
