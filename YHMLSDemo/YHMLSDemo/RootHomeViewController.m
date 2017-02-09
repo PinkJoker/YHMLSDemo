@@ -7,13 +7,13 @@
 //
 
 #import "RootHomeViewController.h"
-#import "circularBeadScrollView.h"
+
 #import "homeTableViewDataSource.h"
-@interface RootHomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface RootHomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate>
 {
     SDCycleScrollView *bannerView;
     NSArray *bannerArray;
-    circularBeadScrollView *collectView;
+
 //    UIScrollView *
 }
 @property(nonatomic, strong)UITableView *homeTableView;
@@ -27,21 +27,28 @@
     // Do any additional setup after loading the view.
    // self.view.backgroundColor = [UIColor yellowColor];
     [self setNavgationView];
+    [self setTableView];
     [self setBanner];
-    [self setCollectView];
+   // [self setCollectView];
     
-    self.homeTableView = [[UITableView alloc]init];
+
+}
+
+-(void)setTableView
+{
+    self.homeTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     [self.view addSubview:self.homeTableView];
     [self.homeTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     NSMutableArray *array = [NSMutableArray array];
-   
+    
     self.tableDataSource = [[homeTableViewDataSource alloc]initWithTableViwDataSource:@"cell" withArray:array andCallBack:^(id item, id cell) {
         
     }];
+    self.tableDataSource.numberArray = 5;
     self.homeTableView.delegate = self;
-    self.homeTableView.dataSource = self;
+    self.homeTableView.dataSource = self.tableDataSource;
 }
 
 -(void)setNavgationView
@@ -59,31 +66,23 @@
     label.font = [UIFont systemFontOfSize:16 weight:0.05];
     self.navigationItem.titleView = label;
 }
-
--(void)setCollectView
-{
-    collectView = [[circularBeadScrollView alloc]init];
-    [self.view addSubview:collectView];
-    [collectView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(bannerView.mas_bottom);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(kWidth *0.3);
-    }];
-}
-
 -(void)setBanner
 {
     bannerArray = @[@"",@"",@"",@""];
-    bannerView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kWidth, kWidth*0.7) delegate:self placeholderImage:nil];
+    bannerView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kWidth, kWidth*0.60) delegate:self placeholderImage:nil];
     bannerView.imageURLStringsGroup = bannerArray;
     bannerView.showPageControl = YES;
     bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     bannerView.currentPageDotImage = [UIImage imageNamed:@""];
-    [self.view addSubview:bannerView];
+    self.homeTableView.tableHeaderView = bannerView;
     
 }
 
 #pragma mark -UITableViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kWidth *0.3;
+}
 
 
 #pragma mark - SDCycleScrollViewDelegate

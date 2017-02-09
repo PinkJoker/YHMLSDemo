@@ -7,7 +7,7 @@
 //
 
 #import "homeTableViewDataSource.h"
-
+#import "circularTableViewCell.h"
 @interface homeTableViewDataSource ()
 @property(nonatomic, copy)NSString *identifier;
 @property(nonatomic, copy)NSMutableArray *dataArray;
@@ -30,9 +30,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    circularTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[circularTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     return cell;
 }
