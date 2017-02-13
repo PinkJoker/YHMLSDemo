@@ -8,6 +8,7 @@
 
 #import "homeTableViewDataSource.h"
 #import "circularTableViewCell.h"
+#import "scrollTableViewCell.h"
 @interface homeTableViewDataSource ()
 @property(nonatomic, copy)NSString *identifier;
 @property(nonatomic, copy)NSMutableArray *dataArray;
@@ -30,16 +31,24 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    circularTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[circularTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    if (indexPath.row == 0) {
+        circularTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[circularTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        return cell;
     }
-    return cell;
+    scrollTableViewCell *scrollCell = [tableView dequeueReusableCellWithIdentifier:@"scrollCell"];
+    if (!scrollCell) {
+        scrollCell = [[scrollTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"scrollCell"];
+    }
+    return scrollCell;
+   
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 2;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

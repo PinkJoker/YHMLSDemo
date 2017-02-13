@@ -81,9 +81,22 @@
 #pragma mark -UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return kWidth *0.3;
+    if (indexPath.row == 0) {
+        return kWidth *0.3;
+    }
+    
+    return kWidth *0.35 + 100;
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.1;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.1;
+}
 
 #pragma mark - SDCycleScrollViewDelegate
 

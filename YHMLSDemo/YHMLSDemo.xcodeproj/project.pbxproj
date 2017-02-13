@@ -21,6 +21,7 @@
 		371360301E49907700EABCB7 /* RootBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713602F1E49907700EABCB7 /* RootBuyCarViewController.m */; };
 		371360331E49908200EABCB7 /* RootMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371360321E49908200EABCB7 /* RootMyViewController.m */; };
 		3713603C1E49C62700EABCB7 /* circularBeadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713603B1E49C62700EABCB7 /* circularBeadScrollView.m */; };
+		377D77F51E518B57005940B5 /* scrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 377D77F41E518B57005940B5 /* scrollTableViewCell.m */; };
 		37863FA51E4C32C5008A7E8D /* circularTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37863FA41E4C32C5008A7E8D /* circularTableViewCell.m */; };
 		37DC28CB1E4AEC9E00D61AE9 /* circularCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DC28C91E4AEC9E00D61AE9 /* circularCollectionViewCell.m */; };
 		37DC28CC1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DC28CA1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib */; };
@@ -57,6 +58,8 @@
 		371360321E49908200EABCB7 /* RootMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootMyViewController.m; sourceTree = "<group>"; };
 		3713603A1E49C62700EABCB7 /* circularBeadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circularBeadScrollView.h; sourceTree = "<group>"; };
 		3713603B1E49C62700EABCB7 /* circularBeadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circularBeadScrollView.m; sourceTree = "<group>"; };
+		377D77F31E518B57005940B5 /* scrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollTableViewCell.h; sourceTree = "<group>"; };
+		377D77F41E518B57005940B5 /* scrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollTableViewCell.m; sourceTree = "<group>"; };
 		37863FA31E4C32C5008A7E8D /* circularTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circularTableViewCell.h; sourceTree = "<group>"; };
 		37863FA41E4C32C5008A7E8D /* circularTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circularTableViewCell.m; sourceTree = "<group>"; };
 		37DC28C81E4AEC9E00D61AE9 /* circularCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circularCollectionViewCell.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				371360281E49905000EABCB7 /* RootHomeViewController.h */,
 				371360291E49905000EABCB7 /* RootHomeViewController.m */,
+				377D77F31E518B57005940B5 /* scrollTableViewCell.h */,
+				377D77F41E518B57005940B5 /* scrollTableViewCell.m */,
 				37863FA31E4C32C5008A7E8D /* circularTableViewCell.h */,
 				37863FA41E4C32C5008A7E8D /* circularTableViewCell.m */,
 				37DC28CD1E4B077C00D61AE9 /* homeTableViewDataSource.h */,
@@ -342,6 +347,7 @@
 				3713602A1E49905000EABCB7 /* RootHomeViewController.m in Sources */,
 				371360091E496BD300EABCB7 /* AppDelegate.m in Sources */,
 				3713603C1E49C62700EABCB7 /* circularBeadScrollView.m in Sources */,
+				377D77F51E518B57005940B5 /* scrollTableViewCell.m in Sources */,
 				371360231E49761100EABCB7 /* BaseNavgationViewController.m in Sources */,
 				371360201E4975A900EABCB7 /* BaseViewController.m in Sources */,
 				371360261E498CA400EABCB7 /* BaseTabbarViewController.m in Sources */,
