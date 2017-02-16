@@ -13,8 +13,6 @@
 {
     SDCycleScrollView *bannerView;
     NSArray *bannerArray;
-
-//    UIScrollView *
 }
 @property(nonatomic, strong)UITableView *homeTableView;
 @property(nonatomic, strong)homeTableViewDataSource *tableDataSource;
@@ -85,7 +83,7 @@
         return kWidth *0.3;
     }
     
-    return kWidth *0.35 + 100;
+    return kWidth *0.35 + 130;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -93,9 +91,19 @@
     return 0.1;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kWidth *0.35 +100;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 0.1;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - SDCycleScrollViewDelegate
