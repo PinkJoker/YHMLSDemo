@@ -9,6 +9,7 @@
 #import "homeTableViewDataSource.h"
 #import "circularTableViewCell.h"
 #import "scrollTableViewCell.h"
+#import "GunDongTableViewCell.h"
 @interface homeTableViewDataSource ()
 @property(nonatomic, copy)NSString *identifier;
 @property(nonatomic, copy)NSMutableArray *dataArray;
@@ -38,17 +39,28 @@
         }
         return cell;
     }
-    scrollTableViewCell *scrollCell = [tableView dequeueReusableCellWithIdentifier:@"scrollCell"];
-    if (!scrollCell) {
-        scrollCell = [[scrollTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"scrollCell"];
+   else if (indexPath.row == 1) {
+        scrollTableViewCell *scrollCell = [tableView dequeueReusableCellWithIdentifier:@"scrollCell"];
+        if (!scrollCell) {
+            scrollCell = [[scrollTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"scrollCell"];
+        }
+        return scrollCell;
+    }else
+    {
+        GunDongTableViewCell *gundongCell = [tableView dequeueReusableCellWithIdentifier:@"gundongCell"];
+        if (!gundongCell) {
+            gundongCell = [[GunDongTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"gundongCell"];
+        }
+        return gundongCell;
     }
-    return scrollCell;
+    
+
    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

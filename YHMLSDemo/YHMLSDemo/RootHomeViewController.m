@@ -81,10 +81,12 @@
 {
     if (indexPath.row == 0) {
         return kWidth *0.3;
+    }else if (indexPath.row ==1){
+          return kWidth *0.35 + 130;
+    }else{
+        return kWidth *0.35+130;
     }
-    
-    return kWidth *0.35 + 130;
-    
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

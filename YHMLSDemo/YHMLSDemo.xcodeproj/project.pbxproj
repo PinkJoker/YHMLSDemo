@@ -28,6 +28,10 @@
 		37DC28CF1E4B077C00D61AE9 /* homeTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DC28CE1E4B077C00D61AE9 /* homeTableViewDataSource.m */; };
 		37E3C1E61E55946400F1D021 /* GunDongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3C1E51E55946400F1D021 /* GunDongTableViewCell.m */; };
 		37E3C1E91E5597B200F1D021 /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3C1E81E5597B200F1D021 /* PagedFlowView.m */; };
+		37EF24FF1E56CBE900A3E540 /* 0.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37EF24FB1E56CBE900A3E540 /* 0.tiff */; };
+		37EF25001E56CBE900A3E540 /* 1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37EF24FC1E56CBE900A3E540 /* 1.tiff */; };
+		37EF25011E56CBE900A3E540 /* 2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37EF24FD1E56CBE900A3E540 /* 2.tiff */; };
+		37EF25021E56CBE900A3E540 /* 3.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37EF24FE1E56CBE900A3E540 /* 3.tiff */; };
 		E8EB30BB8ACEFD91CD96E23A /* libPods-YHMLSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8364FEF6CE1C2943C9BC3EB /* libPods-YHMLSDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +77,10 @@
 		37E3C1E51E55946400F1D021 /* GunDongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunDongTableViewCell.m; sourceTree = "<group>"; };
 		37E3C1E71E5597B200F1D021 /* PagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedFlowView.h; sourceTree = "<group>"; };
 		37E3C1E81E5597B200F1D021 /* PagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedFlowView.m; sourceTree = "<group>"; };
+		37EF24FB1E56CBE900A3E540 /* 0.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 0.tiff; sourceTree = "<group>"; };
+		37EF24FC1E56CBE900A3E540 /* 1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 1.tiff; sourceTree = "<group>"; };
+		37EF24FD1E56CBE900A3E540 /* 2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 2.tiff; sourceTree = "<group>"; };
+		37EF24FE1E56CBE900A3E540 /* 3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 3.tiff; sourceTree = "<group>"; };
 		97AAC7D95B5220B60B6F99CD /* Pods-YHMLSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMLSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMLSDemo/Pods-YHMLSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E8364FEF6CE1C2943C9BC3EB /* libPods-YHMLSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YHMLSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +169,10 @@
 		371360361E49922C00EABCB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				37EF24FB1E56CBE900A3E540 /* 0.tiff */,
+				37EF24FC1E56CBE900A3E540 /* 1.tiff */,
+				37EF24FD1E56CBE900A3E540 /* 2.tiff */,
+				37EF24FE1E56CBE900A3E540 /* 3.tiff */,
 				371360281E49905000EABCB7 /* RootHomeViewController.h */,
 				371360291E49905000EABCB7 /* RootHomeViewController.m */,
 				37E3C1E41E55946400F1D021 /* GunDongTableViewCell.h */,
@@ -288,7 +300,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EF25021E56CBE900A3E540 /* 3.tiff in Resources */,
+				37EF24FF1E56CBE900A3E540 /* 0.tiff in Resources */,
+				37EF25011E56CBE900A3E540 /* 2.tiff in Resources */,
 				371360141E496BD300EABCB7 /* LaunchScreen.storyboard in Resources */,
+				37EF25001E56CBE900A3E540 /* 1.tiff in Resources */,
 				371360111E496BD300EABCB7 /* Assets.xcassets in Resources */,
 				3713600F1E496BD300EABCB7 /* Main.storyboard in Resources */,
 				37DC28CC1E4AEC9E00D61AE9 /* circularCollectionViewCell.xib in Resources */,
