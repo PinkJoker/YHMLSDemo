@@ -54,13 +54,7 @@
         make.centerY.mas_equalTo(weakSelf.titleLabel.mas_centerY);
         make.width.height.mas_equalTo(15);
     }];
-    self.hFlowView.frame = CGRectMake(0, 20, kWidth, kWidth *0.55);
-//    [self.hFlowView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(0);
-//        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).offset(15);
-//        make.left.mas_equalTo(10);
-//        make.right.mas_equalTo(10);
-//    }];
+    self.hFlowView.frame = CGRectMake(0, 20, kWidth, kWidth *0.65);
     self.hFlowView.delegate = self;
     self.hFlowView.dataSource = self;
 //    self.hFlowView.pageControl = hPageControl;
@@ -76,22 +70,23 @@
     self.describeLabel = [[UILabel alloc]init];
     [self.contentView addSubview:self.describeLabel];
     [self.subheadLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.hFlowView.mas_left).offset(10);
-        make.top.mas_equalTo(weakSelf.hFlowView.mas_bottom).offset(20);
+        make.left.mas_equalTo(40);
+        make.top.mas_equalTo(weakSelf.hFlowView.mas_bottom).offset(00);
     }];
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(weakSelf.subheadLabel.)
+        make.left.mas_equalTo(weakSelf.subheadLabel.mas_right).offset(0);
+        make.centerY.mas_equalTo(weakSelf.subheadLabel.mas_centerY);
     }];
     
   self.subheadLabel.text = @"美丽说";
-    self.titleLabel.text = @"美丽说";
-    
+    self.titleLabel.text = @"美丽说标题";
+    self.timeLabel.text = @"美丽说时间";
     
 }
 
 -(CGSize)sizeForPageInFlowView:(PagedFlowView *)flowView
 {
-    return CGSizeMake(kWidth-60, 150);
+    return CGSizeMake(kWidth-80, kWidth *0.55);
 }
 - (NSInteger)numberOfPagesInFlowView:(PagedFlowView *)flowView{
     return [self.imageArray count];

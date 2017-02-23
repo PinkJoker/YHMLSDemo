@@ -84,7 +84,7 @@
     }else if (indexPath.row ==1){
           return kWidth *0.35 + 130;
     }else{
-        return kWidth *0.35+130;
+        return kWidth *0.35+160;
     }
 
 }
